@@ -1,0 +1,27 @@
+:root {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem; }
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05); }
+
+.header__topbar {
+  background-color: #000;
+  color: #fff; }
+
+.header__navbar .navbar-nav .nav-link {
+  color: #606060; }
+
+#haute-hero {
+  background-color: #f7f8fb; }
+
+.footer__bottom {
+  background-color: #000;
+  color: #fff;
+  line-height: 6rem; }
+
+.footer__bottom a {
+  color: #fff; }
