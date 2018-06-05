@@ -2,6 +2,13 @@
 
 show_admin_bar( false );
 
+function haute_maintenance() {
+	if( ! is_user_logged_in() && ! is_page( '11' ) )
+		wp_redirect( get_the_permalink( '11' ));
+}
+add_action( 'template_redirect', 'haute_maintenance' );
+
+
 // Set content width value based on the theme's design
 if ( ! isset( $content_width ) )
 	$content_width = 1110;
@@ -57,7 +64,7 @@ require_once get_stylesheet_directory() . '/inc/class-wp-bootstrap-navwalker.php
 function add_theme_scripts() {
   wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.0.9/css/all.css', array(), '5.0.6', 'all' );
   wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css', array(), '4.0.0', 'all' );
-  wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Lato:400,900|Open+Sans:300,400,700', array(), null, 'all' );
+  wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,900|Roboto+Condensed:700|Open+Sans:300,400,700', array(), null, 'all' );
 
   wp_enqueue_style( 'haute', get_template_directory_uri() . '/assets/css/haute.css', array(), uniqid(), 'all');
 

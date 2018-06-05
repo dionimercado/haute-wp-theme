@@ -1,35 +1,246 @@
 :root {
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.4rem;
-}
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem; }
+
+a:hover {
+  text-decoration: none; }
 
 .box-shadow {
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
-}
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05); }
+
+.bg-light {
+  background-color: #f7f9fb !important; }
+
+.btn {
+  font-size: 14px;
+  padding: 0.7rem 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all .3s ease; }
+
+.btn-rounded {
+  border-radius: 50px !important; }
+
+.btn-primary {
+  background-color: transparent;
+  border-color: #000;
+  color: #000; }
+  .btn-primary i {
+    transition: all .3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 32%;
+    right: 2.2rem; }
+  .btn-primary:hover {
+    color: inherit;
+    background-color: inherit;
+    border-color: inherit;
+    padding-left: 2rem;
+    padding-right: 3rem; }
+    .btn-primary:hover i {
+      opacity: 1;
+      transform: translateX(1rem); }
 
 .header__topbar {
   background-color: #000;
   color: #fff;
-}
+  line-height: 3.2rem; }
+  .header__topbar a {
+    color: #888; }
+    .header__topbar a:hover {
+      color: #fff; }
+  .header__topbar ul {
+    margin-bottom: 0; }
+  .header__topbar p {
+    margin-bottom: 0;
+    color: #888; }
+    .header__topbar p span {
+      color: #eee; }
 
 .header__navbar .navbar-nav .nav-link {
-  color: #606060;
-}
+  color: #474747;
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin: 0 1.2rem; }
+  .header__navbar .navbar-nav .nav-link:hover {
+    color: #aae203; }
 
 #haute-hero {
-  background-color: #f7f8fb;
-}
+  background-color: #f7f8fb; }
+
+.hf-featured {
+  padding: 8rem 0; }
+  .hf-featured a figure {
+    position: relative; }
+    .hf-featured a figure::before {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      height: 94%;
+      width: 90%;
+      content: "";
+      position: absolute;
+      top: 3%;
+      left: 5%;
+      transform: scale(0);
+      transition: all .3s ease;
+      z-index: 1; }
+    .hf-featured a figure::after {
+      content: "";
+      background-color: rgba(255, 255, 255, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      transition: all .3s ease; }
+    .hf-featured a figure figcaption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      color: #fff; }
+      .hf-featured a figure figcaption h3 {
+        color: #000;
+        font-size: 2rem;
+        background-color: #fff;
+        padding: 0.3rem 1rem; }
+      .hf-featured a figure figcaption p {
+        font-size: 4rem;
+        color: #fff;
+        margin-bottom: 0;
+        line-height: 3rem;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); }
+      .hf-featured a figure figcaption span {
+        font-size: 1.6rem;
+        color: #eee; }
+  .hf-featured a:hover figure::before {
+    transform: scale(1); }
+  .hf-featured a:hover figure::after {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+.hf-arrivals {
+  font-family: "Lato", sans-serif; }
+  .hf-arrivals__heading {
+    padding-left: 5.5rem;
+    position: relative; }
+    .hf-arrivals__heading::before {
+      content: "";
+      display: block;
+      width: 4.4rem;
+      height: 0.1rem;
+      background-color: #000;
+      position: absolute;
+      top: 2.2rem;
+      left: 0; }
+    .hf-arrivals__heading h2 {
+      position: relative;
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      color: #000;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-transform: none;
+      font-size: 4.4rem;
+      line-height: 4.4rem;
+      letter-spacing: 0; }
+    .hf-arrivals__heading small {
+      font-family: "Roboto Condensed";
+      font-weight: 700;
+      color: #c3c1c1;
+      text-transform: uppercase;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      letter-spacing: 0.4rem; }
+    .hf-arrivals__heading p {
+      color: #646464;
+      line-height: 2.4rem;
+      font-weight: 300; }
+
+.hf-trending__heading {
+  text-align: center;
+  position: relative; }
+  .hf-trending__heading h2 {
+    color: #727c85;
+    position: relative;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-transform: none;
+    font-size: 4.4rem;
+    line-height: 4.4rem;
+    letter-spacing: 0;
+    display: inline-block; }
+    .hf-trending__heading h2::before, .hf-trending__heading h2::after {
+      content: "";
+      display: block;
+      width: 4.4rem;
+      height: 0.1rem;
+      background-color: #000;
+      position: absolute;
+      top: 2.5rem;
+      left: -10rem; }
+    .hf-trending__heading h2::after {
+      right: -10rem;
+      left: unset; }
+  .hf-trending__heading small {
+    display: block;
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    color: #c3c1c1;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.4rem; }
+
+.hf-trending__nav {
+  list-style: none;
+  margin: 3rem 0 0 0;
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+  text-align: center; }
+  .hf-trending__nav li {
+    display: inline-block; }
+    .hf-trending__nav li a {
+      padding: 12px 15px;
+      color: #474747;
+      display: block;
+      font-size: 1.6rem; }
+      .hf-trending__nav li a.active {
+        color: #aae203;
+        position: relative; }
+        .hf-trending__nav li a.active::before {
+          content: "";
+          width: 100%;
+          height: 0.1rem;
+          background-color: #aae203;
+          position: absolute;
+          bottom: -0.1rem;
+          left: 0; }
+      .hf-trending__nav li a:hover {
+        color: #000; }
+
+.footer__top {
+  background-color: #222;
+  min-height: 30rem; }
 
 .footer__bottom {
   background-color: #000;
   color: #fff;
-  line-height: 6rem;
-}
-
-.footer__bottom a {
-  color: #fff;
-}
+  line-height: 6rem; }
+  .footer__bottom a {
+    color: #fff; }
