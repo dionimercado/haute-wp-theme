@@ -3,7 +3,11 @@
 
 body {
   font-family: "Lato", sans-serif;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  color: #646464; }
+
+a {
+  color: #000; }
 
 a:hover {
   text-decoration: none; }
@@ -14,36 +18,47 @@ a:hover {
 .bg-light {
   background-color: #f7f9fb !important; }
 
-.btn {
-  font-size: 14px;
-  padding: 0.7rem 2.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.btn, .button {
   position: relative;
-  transition: all .3s ease; }
+  transition: all .3s ease;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1.3rem;
+  height: 4.5rem;
+  line-height: 4.1rem;
+  letter-spacing: 0;
+  padding: 0 2rem;
+  border: 0.2rem solid;
+  border-radius: 0.2rem;
+  text-transform: uppercase; }
 
 .btn-rounded {
   border-radius: 50px !important; }
 
-.btn-primary {
-  background-color: transparent;
-  border-color: #000;
-  color: #000; }
-  .btn-primary i {
+.btn-primary, #place_order {
+  background-color: #323232;
+  border-color: #323232;
+  color: #fff; }
+  .btn-primary i, #place_order i {
     transition: all .3s ease;
     opacity: 0;
     position: absolute;
     top: 32%;
     right: 2.2rem; }
-  .btn-primary:hover {
+  .btn-primary:hover, #place_order:hover {
     color: inherit;
     background-color: inherit;
     border-color: inherit;
     padding-left: 2rem;
     padding-right: 3rem; }
-    .btn-primary:hover i {
+    .btn-primary:hover i, #place_order:hover i {
       opacity: 1;
       transform: translateX(1rem); }
+
+.page-header {
+  padding: 8rem 0;
+  margin-bottom: 4rem; }
 
 .header__topbar {
   background-color: #000;
@@ -60,6 +75,10 @@ a:hover {
     color: #888; }
     .header__topbar p span {
       color: #eee; }
+
+.header__navbar .navbar-brand img {
+  height: 6rem;
+  width: auto; }
 
 .header__navbar .navbar-nav .nav-link {
   color: #474747;
@@ -244,3 +263,94 @@ a:hover {
   line-height: 6rem; }
   .footer__bottom a {
     color: #fff; }
+
+.woocommerce-cart .woocommerce > form {
+  border: 1px solid #f1f1f1;
+  padding: 3rem; }
+
+.woocommerce-cart .woocommerce .cart-collaterals > .cart_totals {
+  width: 100%; }
+
+.woocommerce-cart .shop_table thead {
+  color: #212529; }
+  .woocommerce-cart .shop_table thead th {
+    border-top: 0;
+    text-transform: uppercase;
+    padding: 15px 0;
+    vertical-align: middle;
+    border-bottom: 1px solid #e1e1e1 !important; }
+
+.woocommerce-cart .shop_table .product-thumbnail {
+  width: 15%;
+  padding-right: 20px; }
+
+.woocommerce-cart .cart-collaterals .cart_totals h2 {
+  text-transform: uppercase; }
+
+.woocommerce-cart .cart-collaterals .cart_totals table {
+  padding: 0;
+  background-color: #f2f2f2;
+  border-radius: 0; }
+
+.woocommerce-cart table,
+.woocommerce-cart th,
+.woocommerce-cart td,
+.woocommerce-cart .actions {
+  border: 0 !important;
+  margin: 0 !important; }
+
+.heading-color {
+  color: #323232; }
+
+.woocommerce-cart table.cart img,
+.woocommerce-checkout table.cart img {
+  width: 100%; }
+
+.woocommerce table.shop_table {
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  font-size: 1.6rem; }
+  .woocommerce table.shop_table th, .woocommerce table.shop_table td {
+    padding: 1rem 0; }
+  .woocommerce table.shop_table th.product-name {
+    text-transform: uppercase; }
+  .woocommerce table.shop_table .cart_item th, .woocommerce table.shop_table .cart_item td {
+    font-size: 1.3rem;
+    color: #666; }
+  .woocommerce table.shop_table th:last-child, .woocommerce table.shop_table td:last-child {
+    text-align: right; }
+
+.woocommerce-input-wrapper {
+  display: block;
+  width: 100%; }
+
+.input-text {
+  border: 1px solid #ebebeb;
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 2px;
+  padding: 0 10px; }
+
+.woocommerce-checkout #order_comments {
+  min-height: 100px;
+  padding: 10px;
+  line-height: normal; }
+
+.woocommerce-checkout h3 {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.woocommerce-checkout #payment {
+  background: transparent;
+  border-radius: 0; }
+  .woocommerce-checkout #payment ul.payment_methods, .woocommerce-checkout #payment .place-order {
+    padding: 0 !important; }
+  .woocommerce-checkout #payment div.payment_box {
+    background-color: #f9f9f9; }
+    .woocommerce-checkout #payment div.payment_box::before {
+      border-bottom-color: #f9f9f9; }
+  .woocommerce-checkout #payment .wc-stripe-elements-field, .woocommerce-checkout #payment .stripe-card-group {
+    width: 100%; }

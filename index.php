@@ -52,7 +52,7 @@
     <div class="row">
       <div class="col-md-4">
         <div class="hf-arrivals__heading">
-          <h2><?php _e( 'New Arrivals' ) ?></h2>
+          <h2><?php _e( 'New Arrivals' ) ?> <?php echo get_current_user_id() ?></h2>
           <small>ITEMS THAT WORTH THE HYPE</small>
           <p class="my-5">Here are our best-selling products on Haute Couture. They are picked up by fashionistas, fashion bloggers, as well as those who want to use fashion items to mark their personal style.</p>
           <a href="#" class="btn btn-primary btn-rounded"><?php _e( 'Shop Now' ) ?> <i class="fas fa-angle-right"></i></a>

@@ -3,8 +3,11 @@
 show_admin_bar( false );
 
 function haute_maintenance() {
-	if( ! is_user_logged_in() && ! is_page( '11' ) )
+	if( ! is_user_logged_in() && ! is_page( '11' ) ) {
 		wp_redirect( get_the_permalink( '11' ));
+	}elseif( get_current_user_id() > 1 && ! is_page( '11' ) ) {
+		wp_redirect( get_the_permalink( '11' ));
+	}
 }
 add_action( 'template_redirect', 'haute_maintenance' );
 
@@ -30,6 +33,19 @@ function haute_theme_features()  {
 
 	// Add theme support for document Title tag
 	add_theme_support( 'title-tag' );
+
+	add_theme_support( 'woocommerce', array(
+		'thumbnail_image_width' => 150,
+		'single_image_width'    => 300,
+    'product_grid'          => array(
+        'default_rows'    => 3,
+        'min_rows'        => 2,
+        'max_rows'        => 8,
+        'default_columns' => 4,
+        'min_columns'     => 2,
+        'max_columns'     => 5,
+    ),
+	) );
 
   // Add support for two custom navigation menus.
   register_nav_menus( array(
@@ -62,6 +78,9 @@ require_once get_stylesheet_directory() . '/inc/class-wp-bootstrap-navwalker.php
 
 
 function add_theme_scripts() {
+	// wp_dequeue_style('woocommerce-layout');
+	// wp_dequeue_style('woocommerce-general');
+
   wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.0.9/css/all.css', array(), '5.0.6', 'all' );
   wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css', array(), '4.0.0', 'all' );
   wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,900|Roboto+Condensed:700|Open+Sans:300,400,700', array(), null, 'all' );

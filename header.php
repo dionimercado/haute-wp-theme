@@ -9,7 +9,7 @@
 </head>
 <body <?php body_class() ?>>
 
-  <header class="header fixed-top">
+  <header class="header">
     <div class="header__topbar">
       <div class="container">
         <div class="row">
@@ -36,7 +36,7 @@
 
     <nav class="header__navbar navbar navbar-expand-lg bg-white">
       <div class="container">
-        <a class="navbar-brand" href="<?php echo home_url() ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.svg" alt="" height="60"></a>
+        <a class="navbar-brand" href="<?php echo home_url() ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.svg" alt="HauteFootwear" /></a>
         <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
           <span class="navbar-toggler-icon"></span>
         </button>

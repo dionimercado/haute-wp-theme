@@ -32,7 +32,7 @@
             </li>
             <li class="list-inline-item">&middot;</li>
             <li class="list-inline-item">
-              <a href="#"><?php _e( 'Terms and Conditions' ) ?></a>
+              <a href="#"><?php _e( 'Terms & Conditions' ) ?></a>
             </li>
           </ul>
         </div>
